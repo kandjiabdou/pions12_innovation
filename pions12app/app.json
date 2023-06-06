@@ -1,0 +1,10 @@
+{
+  "expo": {
+    "name": "pions12app",
+    "slug": "pions12app",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
