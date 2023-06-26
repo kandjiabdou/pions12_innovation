@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, StyleSheet, Image } from 'react-native';
 
-const ParametresScreen = () => {
+const ProfilScreen = () => {
   return (
     <View style={styles.container}>
         <ImageBackground
@@ -31,15 +31,16 @@ const ParametresScreen = () => {
           />
           <Text style={styles.username}>Pseudo</Text>
         </View>
-        <Button
+        
+        <Button style={styles.editButton}
           title="Modifier profil"
           onPress={() => {}}
         />
       </View>
       <View style={styles.bottomContainer}>
-      <Button style={styles.connexion}> 
-          <Text style={styles.connect}>Se connecter avec</Text>                                      
-      </Button>
+      <View style={styles.connectContainer}>
+  <Text style={styles.connect}>Se connecter avec</Text>
+</View>  
       <View style={styles.socialIconsContainer}> 
           <Image
             source={require('src/assets/drawable/facebook.png')}
@@ -81,9 +82,12 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   content: {
+    backgroundColor: '#8D5529',
     flex: 1,
     paddingHorizontal: 16,
     paddingTop: 20,
+    height: 554,
+    width: 341,
   },
   profileInfo: {
     flexDirection: 'row',
@@ -100,12 +104,17 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: 'bold',
   },
+  editButton: {
+    position: 'absolute', 
+    bottom: 0, 
+    right: 0, 
+  },  
   bottomContainer: {
     marginTop: 16,
     alignItems: 'center',
   },
-  connexion: {
-    backgroundColor: 'blue',
+  connectContainer: {
+    backgroundColor: '#8D5529',
     paddingHorizontal: 16,
     paddingVertical: 8,
     borderRadius: 8,
@@ -125,6 +134,10 @@ const styles = StyleSheet.create({
     height: 24,
     marginRight: 8,
   },
+  backgroundImage: {
+    flex: 1,
+    resizeMode: 'cover',
+  },
 });
 
-export default ParametresScreen;
+export default ProfilScreen;

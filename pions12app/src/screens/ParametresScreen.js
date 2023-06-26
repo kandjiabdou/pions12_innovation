@@ -85,14 +85,22 @@ const styles = StyleSheet.create({
     flex: 1,
     paddingHorizontal: 16,
     paddingTop: 20,
+    backgroundColor: '#8D5529',
+    height: 531,
+    width: 341,
   },
   option: {
     paddingVertical: 12,
-    borderBottomWidth: 1,
-    borderBottomColor: '#EFEFEF',
+    paddingLeft: 16,
+    backgroundColor: '#DEB796',
   },
   optionText: {
-    fontSize: 16,
+    fontSize: 24,
+    fontWeight: 'bold',
+  },
+  backgroundImage: {
+    flex: 1,
+    resizeMode: 'cover',
   },
 });
 

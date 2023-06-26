@@ -1,7 +1,7 @@
 import React from 'react';
-import { View, Text, Button, Image, StyleSheet } from 'react-native';
+import { View, Button, Image, ImageBackground, StyleSheet } from 'react-native';
 
-const HomeScreen = ({ navigation }) => {
+const AccueilScreen = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <ImageBackground
@@ -60,12 +60,22 @@ const HomeScreen = ({ navigation }) => {
 
       {/* Footer */}
       <View style={styles.footer}>
-        <Button
-          title="Paramètres"
-          onPress={() => navigation.navigate('Paramètres')}
-        />
-        <Button title="Aide" onPress={() => {}} />
-        <Button title="Partager" onPress={() => {}} />
+      <IconButton
+    icon={() => <Icon name="cog" size={24} color="white" />}
+    onPress={() => navigation.navigate('Paramètres')}
+  />
+  <IconButton
+    icon={() => <Icon name="help-circle" size={24} color="white" />}
+    onPress={() => {}}
+  />
+  <IconButton
+    icon={() => <Icon name="thumb-up" size={24} color="blue" />}
+    onPress={() => {}}
+  />
+  <IconButton
+    icon={() => <Icon name="share" size={24} color="white" />}
+    onPress={() => {}}
+  />
       </View>
       </ImageBackground>
     </View>
@@ -91,8 +101,8 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   appIcon: {
-    width: 200,
-    height: 200,
+    width: 274,
+    height: 79,
   },
   navigationButtons: {
     marginBottom: 20,
@@ -100,7 +110,27 @@ const styles = StyleSheet.create({
   content: {
     marginBottom: 20,
   },
-  footer: {},
+  Button: {
+    width: 133, 
+    height: 93,
+    backgroundColor: 'red',
+    borderRadius: 20,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  footer: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    padding: 10,
+  },
+  
+  backgroundImage: {
+    flex: 1,
+    resizeMode: 'cover',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
 });
 
-export default HomeScreen;
+export default AccueilScreen;
