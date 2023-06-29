@@ -6,7 +6,7 @@ const AideScreen = () => {
     <ImageBackground
       style={styles.aideIcon}
       resizeMode="cover"
-      source={require("../assets/aide.png")}
+      source={require("../assets/drawable/background2.jpg")}
     >
       <Image
         style={styles.image10Icon}

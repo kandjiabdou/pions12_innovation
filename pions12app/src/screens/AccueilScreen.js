@@ -7,7 +7,7 @@ const AccueilScreen = ({ navigation }) => {
       <ImageBackground
       source={require('src/assets/drawable/background2.jpg')}
       style={styles.backgroundImage}
-    >
+    />
       {/* Header */}
       <Image
           source={require('src/assets/profile.png')}
@@ -15,7 +15,7 @@ const AccueilScreen = ({ navigation }) => {
       />
 
       {/* Boutons de navigation */}
-      <View style={styles.navigationButtons}>
+      <View style={styles.headerButtons}>
         <Button
           title="Classement"
           onPress={() => navigation.navigate('Classement')}
@@ -34,6 +34,7 @@ const AccueilScreen = ({ navigation }) => {
       <View style={styles.imageContainer}>
         <Image
           source={require('src/assets/drawable/titre_demarrage.png')}
+          resizeMode="cover"
           style={styles.appIcon}
         />
       </View>
@@ -44,17 +45,37 @@ const AccueilScreen = ({ navigation }) => {
           title="Jouer avec l'ordinateur"
           onPress={() => {}}
         />
+        <Image
+          style={styles.computerPlay}
+          resizeMode="cover"
+          source={require("../assets/computerPlay")}
+        />
         <Button
           title="Jouer en local"
           onPress={() => {}}
+        />
+        <Image
+          style={styles.localPlay}
+          resizeMode="cover"
+          source={require("../assets/localPlay")}
         />
         <Button
           title="Jouer en ligne"
           onPress={() => {}}
         />
+        <Image
+          style={styles.onlinePlay}
+          resizeMode="cover"
+          source={require("../assets/onlinePlay")}
+        />
         <Button
           title="Jouer avec des amis"
           onPress={() => {}}
+        />
+        <Image
+          style={styles.friendsPlay}
+          resizeMode="cover"
+          source={require("../assets/friendsPlay")}
         />
       </View>
 
@@ -77,7 +98,6 @@ const AccueilScreen = ({ navigation }) => {
     onPress={() => {}}
   />
       </View>
-      </ImageBackground>
     </View>
   );
 };
@@ -104,7 +124,7 @@ const styles = StyleSheet.create({
     width: 274,
     height: 79,
   },
-  navigationButtons: {
+  headerButtons: {
     marginBottom: 20,
   },
   content: {

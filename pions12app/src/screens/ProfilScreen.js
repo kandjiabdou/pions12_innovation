@@ -7,7 +7,7 @@ const ProfilScreen = () => {
         <ImageBackground
       source={require('src/assets/drawable/background2.jpg')}
       style={styles.backgroundImage}
-    >
+    />
       <View style={styles.header}>
         <Image
           source={require('src/assets/drawable/titre_demarrage.png')}
@@ -31,7 +31,34 @@ const ProfilScreen = () => {
           />
           <Text style={styles.username}>Pseudo</Text>
         </View>
-        
+        <View style={[styles.frame, styles.frameLayout]}>
+          <Text style={[styles.victoiresDeTournoi, styles.profilTypo]}>
+            Victoires de tournoi
+          </Text>
+        </View>
+        <Image
+          style={styles.gradientGoldRoyalCrownRemoIcon}
+          resizeMode="cover"
+          source={require("../assets/crown")}
+        />
+        <Text style={[styles.text, styles.textTypo]}>00</Text>     
+        <View style={[styles.frame1, styles.frameLayout]}>
+          <Text style={[styles.jeuEnLigne, styles.profilTypo]}>
+            Jeu en ligne
+          </Text>
+        </View>   
+        <Image
+          style={[styles.thumbsDownIcon, styles.thumbsIconLayout]}
+          resizeMode="cover"
+          source={require("../assets/thumbs-down.png")}
+        />
+        <Text style={[styles.text1, styles.textTypo]}>00</Text>
+        <Image
+          style={[styles.thumbsUpIcon, styles.thumbsIconLayout]}
+          resizeMode="cover"
+          source={require("../assets/thumbs-up.png")}
+        />
+        <Text style={[styles.text2, styles.textTypo]}>00</Text>
         <Button style={styles.editButton}
           title="Modifier profil"
           onPress={() => {}}
@@ -39,20 +66,21 @@ const ProfilScreen = () => {
       </View>
       <View style={styles.bottomContainer}>
       <View style={styles.connectContainer}>
-  <Text style={styles.connect}>Se connecter avec</Text>
+  <Text style={styles.connectWith}>SE CONNECTER AVEC</Text>
 </View>  
       <View style={styles.socialIconsContainer}> 
           <Image
             source={require('src/assets/drawable/facebook.png')}
             style={styles.socialIcon}
+            resizeMode="cover"
           />     
           <Image
             source={require('src/assets/drawable/google.png')}
             style={styles.socialIcon}
+            resizeMode="cover"
           />        
       </View>
       </View>
-        </ImageBackground>
     </View>
   );
 };
