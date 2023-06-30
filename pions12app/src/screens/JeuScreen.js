@@ -7,7 +7,7 @@ const JeuScreen = () => {
     <ImageBackground
       style={styles.partieJeuIcon}
       resizeMode="cover"
-      source={require("../assets/partiejeu.png")}
+      source={require("src/assets/drawable/background2.jpg")}
     >
       <View style={styles.game}>
         <View style={styles.gameChild} />
@@ -16,7 +16,7 @@ const JeuScreen = () => {
             <Image
               style={styles.frameChild}
               resizeMode="cover"
-              source={require("../assets/group-6.png")}
+              source={require("src/assets/draw.png")}
             />
             <Text style={[styles.offerDraw, styles.retourTypo]}>
               Offer draw
@@ -26,18 +26,19 @@ const JeuScreen = () => {
             <Image
               style={styles.frameChild}
               resizeMode="cover"
-              source={require("../assets/group-61.png")}
+              source={require("src/assets/quit.png")}
             />
-            <Text style={[styles.offerDraw, styles.retourTypo]}>quitter</Text>
+            <Text style={[styles.offerDraw, styles.retourTypo]}>
+              Quitter
+            </Text>
           </View>
         </View>
         <View style={[styles.retour1Parent, styles.parentLayout]}>
           <Image
             style={styles.retour1Icon}
             resizeMode="cover"
-            source={require("../assets/retour-1.png")}
+            source={require("src/assets/retour.png")}
           />
-          <Text style={[styles.retour, styles.retourTypo]}>retour</Text>
         </View>
         <View style={[styles.homeIndicator, styles.frameGroupPosition]} />
         <View style={[styles.frameGroup, styles.frameGroupPosition]}>
@@ -45,7 +46,7 @@ const JeuScreen = () => {
             <Image
               style={styles.retour1Icon}
               resizeMode="cover"
-              source={require("../assets/group-7.png")}
+              source={require("src/assets/timer.png")}
             />
             <Text style={[styles.text, styles.textTypo]}>00:45</Text>
           </View>
@@ -55,75 +56,13 @@ const JeuScreen = () => {
             </Text>
           </View>
         </View>
+        <View style={[styles.pionBd1Parent, styles.pionLayout]}>
         <Image
           style={[styles.mvmDame1Icon, styles.frameGroupPosition]}
           resizeMode="cover"
-          source={require("../assets/mvm-dame-1.png")}
-        />
-        <View style={[styles.pionBd1Parent, styles.pionLayout]}>
-          <Image
-            style={[styles.pionBd1Icon, styles.pionIconLayout2]}
-            resizeMode="cover"
-            source={require("../assets/pion-bd-1.png")}
-          />
-          <Image
-            style={[styles.pionBd4Icon, styles.pionIconPosition1]}
-            resizeMode="cover"
-            source={require("../assets/pion-bd-4.png")}
-          />
-          <Image
-            style={[styles.pionBd2Icon, styles.pionIconPosition]}
-            resizeMode="cover"
-            source={require("../assets/pion-bd-2.png")}
-          />
-          <Image
-            style={[styles.pionBd3Icon, styles.pionIconPosition]}
-            resizeMode="cover"
-            source={require("../assets/pion-bd-3.png")}
-          />
-          <Image
-            style={[styles.pionBdDame1Icon, styles.pionLayout]}
-            resizeMode="cover"
-            source={require("../assets/pion-bd-dame-1.png")}
-          />
-          <Image
-            style={[styles.pionBd5Icon, styles.pionIconPosition1]}
-            resizeMode="cover"
-            source={require("../assets/pion-bd-5.png")}
-          />
-          <Image
-            style={[styles.pionBd6Icon, styles.pionIconLayout2]}
-            resizeMode="cover"
-            source={require("../assets/pion-bd-6.png")}
-          />
+          source={require("src/assets/plateau_blanc.png")}
+        />        
         </View>
-        <View style={[styles.pionNpParent, styles.pionIconLayout1]}>
-          <Image
-            style={[styles.pionNpIcon, styles.pionIconLayout1]}
-            resizeMode="cover"
-            source={require("../assets/pion-np.png")}
-          />
-          <Image
-            style={[styles.pionNpIcon1, styles.pionIconLayout1]}
-            resizeMode="cover"
-            source={require("../assets/pion-np1.png")}
-          />
-          <Image
-            style={[styles.pionNpDameIcon, styles.pionIconLayout1]}
-            resizeMode="cover"
-            source={require("../assets/pion-np-dame.png")}
-          />
-        </View>
-        <Image
-          style={[styles.pionBd1Icon1, styles.pionIconLayout]}
-          resizeMode="cover"
-          source={require("../assets/pion-bd-11.png")}
-        />
-        <Image
-          style={[styles.pionNpIcon2, styles.pionIconLayout]}
-          resizeMode="cover"
-          source={require("../assets/pion-np2.png")}
-        />
       </View>
     </ImageBackground>
   );
